@@ -1,0 +1,5 @@
+cli-box==0.2.0
+colorama==0.4.6
+pyfiglet==0.8.post1
+strip-ansi==0.1.1
+wcwidth==0.2.6
