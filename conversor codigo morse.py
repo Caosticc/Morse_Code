@@ -24,7 +24,27 @@ def morse_conversor(morse_text):
         morse_converted= inverse.get(char)
         print(morse_converted, end='')
 
-# dictionary with 
+# main code
+def main():
+    try:
+        banner()
+        option=int(input("\nChoose the option: "))
+        if option not in [1,2]:
+            raise ValueError("Invalid option. Choose 1 or 2.") 
+        if option == 1:
+            plane_text = input("\nPut your text to turn into morse: ").upper()
+            text_conversor(plane_text)
+            
+
+
+        if option == 2:
+            morse_text = input("Put your morse to turn into text: ").split()
+            morse_conversor(morse_text)
+
+    except ValueError as error:
+        print(f"Error: {error}")
+
+#dictionary with letters and their respective morsecode symbols
 dictionary = {'{':'{','}': '}',' ': ' ', 'A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.','F':'..-.','G':'--.','H':'....',
 'I':'..','J':'.---','K':'-.-','L':'.-..','M':'--','N':'-.','O':'---','P':'.--.','Q':'--.-','R':'.-.',
 'S':'...','T':'-','U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..','.':'.-.-.-',',':'--..--',
@@ -32,23 +52,6 @@ dictionary = {'{':'{','}': '}',' ': ' ', 'A':'.-','B':'-...','C':'-.-.','D':'-..
 '=':'-...-','-':'-....-','_': '..--.-','"':'.-...','$':'...-..-','@':'.--.-.',
 '1':'.----','2':'..---','3':'...--','4':'....-','5':'.....','6':'-....','7':'--...','8':'---..','9':'----.', '0':'-----'}
 
-try:
-    banner()
-    option=int(input("\nChoose the option: "))
-    if option not in [1,2]:
-        raise ValueError("Invalid option. Choose 1 or 2.") 
-    if option == 1:
-        plane_text = input("\nPut your text to turn into morse: ").upper()
-        text_conversor(plane_text)
-        
 
-
-    if option == 2:
-        morse_text = input("Put your morse to turn into text: ").split()
-        morse_conversor(morse_text)
-
-except ValueError as error:
-    print(f"Error: {error}")
-
-
-
+if __name__ == ('__main__'):
+    main()
