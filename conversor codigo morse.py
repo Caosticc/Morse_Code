@@ -34,9 +34,6 @@ def main():
         if option == 1:
             plane_text = input("\nPut your text to turn into morse: ").upper()
             text_conversor(plane_text)
-            
-
-
         if option == 2:
             morse_text = input("Put your morse to turn into text: ").split()
             morse_conversor(morse_text)
