@@ -11,19 +11,20 @@ def banner():
     print(Fore.MAGENTA + ascii_art.renderText("Morse Code Conversor") + Fore.RESET + author + info)
     print(cli_box.box(f"{'Choose':^}\n{'[1] - For text to morse ':^} \n{'[2] - For morse to text':^} ",corners=('+','+','+','+'), sides=('|','-')))
 
-# funcition to convert plain text into morse code
+# function to convert plain text into morse code
 def text_conversor(plane_text):
     for char in plane_text:
         text_converted = dictionary.get(char)
         print(text_converted, end='/')
 
-# funcition to convert plain text into morse code
+# function to convert plain text into morse code
 def morse_conversor(morse_text):
     inverse = {v: k for k, v in dictionary.items()}
     for char in morse_text:
         morse_converted= inverse.get(char)
         print(morse_converted, end='')
 
+<<<<<<< HEAD
 # main code
 def main():
     try:
@@ -45,6 +46,9 @@ def main():
         print(f"Error: {error}")
 
 #dictionary with letters and their respective morsecode symbols
+=======
+
+>>>>>>> main
 dictionary = {'{':'{','}': '}',' ': ' ', 'A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.','F':'..-.','G':'--.','H':'....',
 'I':'..','J':'.---','K':'-.-','L':'.-..','M':'--','N':'-.','O':'---','P':'.--.','Q':'--.-','R':'.-.',
 'S':'...','T':'-','U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..','.':'.-.-.-',',':'--..--',
