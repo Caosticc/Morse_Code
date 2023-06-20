@@ -66,10 +66,10 @@ posy = height_screen // 2 - height // 2
 window.geometry("%dx%d+%d+%d" % (width, height, posx, posy))
 
 # Change icon
-window.iconbitmap("Images/lm.ico")
+window.iconbitmap("Images\icon.ico")
 
 # Base text
-orientation_text = Label(window, text='Isso é um teste', padx=10, pady=10)
+orientation_text = Label(window, text='Welcome to the Morse Code Converter, it is easy to use and practical, I hope you enjoy it.', padx=10, pady=10)
 orientation_text.grid(column=0, row=0)
 
 # Buttons
